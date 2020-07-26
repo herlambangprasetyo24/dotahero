@@ -10,8 +10,15 @@ import UIKit
 
 class HeroCardCollectionViewCell: UICollectionViewCell {
         
+    @IBOutlet weak var view: UIView!
     @IBOutlet weak var heroImage: UIImageView!
+    @IBOutlet weak var heroNameView: UIView!
     @IBOutlet weak var heroName: UILabel!
+    
+    override func awakeFromNib() {
+        setupUI()
+    }
+    
     static func nib() -> UINib {
         return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     }
@@ -20,7 +27,12 @@ class HeroCardCollectionViewCell: UICollectionViewCell {
         return String(describing: self)
     }
     
-    func setupUI(heroName: String, heroImage: String) {
+    private func setupUI() {
+        view.layer.cornerRadius = 10
+        heroNameView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+    }
+    
+    func setupData(heroName: String, heroImage: String) {
         self.heroName.text = heroName
         self.heroImage.loadUrl(Domain.baseUrl + heroImage)
     }

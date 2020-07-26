@@ -63,7 +63,7 @@ class HeroListViewModel {
         heroListModel.forEach { hero in
             heroCategoryList = Array(Set(hero.roles).union(heroCategoryList))
         }
-        
+        heroCategoryList.sort()
         eventLoadHeroRoleList.onNext(())
     }
 }

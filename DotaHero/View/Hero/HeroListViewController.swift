@@ -53,6 +53,7 @@ class HeroListViewController: UIViewController {
     private func setupTableView() {
         heroListTableView.estimatedRowHeight = 30
         heroListTableView.rowHeight = UITableView.automaticDimension
+        heroListTableView.separatorInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
     }
 
     private func setupCollectionView() {
@@ -83,11 +84,7 @@ extension HeroListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         heroListViewModel.didSelectHeroCategory(index: indexPath.row)
-        tableView.cellForRow(at: indexPath)?.backgroundColor = .blue
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.backgroundColor = .white
+        self.title = heroListViewModel.heroCategoryList[indexPath.row]
     }
 }
 
@@ -104,12 +101,12 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCardCollectionViewCell.cellReuseIdentifier(), for: indexPath) as? HeroCardCollectionViewCell else { return UICollectionViewCell() }
         let selectedHero = heroListViewModel.selectedHeroList[indexPath.row]
-        cell.setupUI(heroName: selectedHero.localizedName, heroImage: selectedHero.image)
+        cell.setupData(heroName: selectedHero.localizedName, heroImage: selectedHero.image)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 200)
+        return CGSize(width: 200, height: 150)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -117,6 +114,6 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return 12
     }
 }
