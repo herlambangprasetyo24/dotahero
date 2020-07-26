@@ -14,6 +14,11 @@
 		03E990AE24CBDF2A008FA24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E990AD24CBDF2A008FA24B /* Assets.xcassets */; };
 		03E990B124CBDF2A008FA24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E990AF24CBDF2A008FA24B /* LaunchScreen.storyboard */; };
 		03E990BC24CBDF2A008FA24B /* DotaHeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E990BB24CBDF2A008FA24B /* DotaHeroTests.swift */; };
+		03E990CD24CBE3B7008FA24B /* Hero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E990CC24CBE3B7008FA24B /* Hero.storyboard */; };
+		03E990CF24CBE3EA008FA24B /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E990CE24CBE3EA008FA24B /* HeroListViewController.swift */; };
+		03E990D224CC1A12008FA24B /* CategoryNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E990D124CC1A12008FA24B /* CategoryNameTableViewCell.swift */; };
+		03E990D524CC1CD4008FA24B /* HeroCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E990D424CC1CD4008FA24B /* HeroCardCollectionViewCell.xib */; };
+		03E990D724CC1DC7008FA24B /* HeroCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E990D624CC1DC7008FA24B /* HeroCardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		03E990B724CBDF2A008FA24B /* DotaHeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DotaHeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E990BB24CBDF2A008FA24B /* DotaHeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaHeroTests.swift; sourceTree = "<group>"; };
 		03E990BD24CBDF2A008FA24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E990CC24CBE3B7008FA24B /* Hero.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hero.storyboard; sourceTree = "<group>"; };
+		03E990CE24CBE3EA008FA24B /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
+		03E990D124CC1A12008FA24B /* CategoryNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNameTableViewCell.swift; sourceTree = "<group>"; };
+		03E990D424CC1CD4008FA24B /* HeroCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		03E990D624CC1DC7008FA24B /* HeroCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,10 @@
 		03E990A324CBDF25008FA24B /* DotaHero */ = {
 			isa = PBXGroup;
 			children = (
+				03E990C924CBE32A008FA24B /* API */,
+				03E990C624CBE060008FA24B /* Model */,
+				03E990C724CBE069008FA24B /* View */,
+				03E990C824CBE073008FA24B /* ViewModel */,
 				03E990A424CBDF25008FA24B /* AppDelegate.swift */,
 				03E990A624CBDF25008FA24B /* SceneDelegate.swift */,
 				03E990A824CBDF25008FA24B /* ViewController.swift */,
@@ -97,6 +111,71 @@
 				03E990BD24CBDF2A008FA24B /* Info.plist */,
 			);
 			path = DotaHeroTests;
+			sourceTree = "<group>";
+		};
+		03E990C624CBE060008FA24B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03E990C724CBE069008FA24B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03E990D324CC1CA5008FA24B /* Xib */,
+				03E990D024CC19F2008FA24B /* Cell */,
+				03E990CB24CBE393008FA24B /* Hero */,
+				03E990CA24CBE37D008FA24B /* CustomView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03E990C824CBE073008FA24B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03E990C924CBE32A008FA24B /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		03E990CA24CBE37D008FA24B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		03E990CB24CBE393008FA24B /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				03E990CC24CBE3B7008FA24B /* Hero.storyboard */,
+				03E990CE24CBE3EA008FA24B /* HeroListViewController.swift */,
+			);
+			path = Hero;
+			sourceTree = "<group>";
+		};
+		03E990D024CC19F2008FA24B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				03E990D124CC1A12008FA24B /* CategoryNameTableViewCell.swift */,
+				03E990D624CC1DC7008FA24B /* HeroCardCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		03E990D324CC1CA5008FA24B /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				03E990D424CC1CD4008FA24B /* HeroCardCollectionViewCell.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E990CD24CBE3B7008FA24B /* Hero.storyboard in Resources */,
 				03E990B124CBDF2A008FA24B /* LaunchScreen.storyboard in Resources */,
 				03E990AE24CBDF2A008FA24B /* Assets.xcassets in Resources */,
 				03E990AC24CBDF25008FA24B /* Main.storyboard in Resources */,
+				03E990D524CC1CD4008FA24B /* HeroCardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E990D724CC1DC7008FA24B /* HeroCardCollectionViewCell.swift in Sources */,
+				03E990CF24CBE3EA008FA24B /* HeroListViewController.swift in Sources */,
 				03E990A924CBDF25008FA24B /* ViewController.swift in Sources */,
 				03E990A524CBDF25008FA24B /* AppDelegate.swift in Sources */,
 				03E990A724CBDF25008FA24B /* SceneDelegate.swift in Sources */,
+				03E990D224CC1A12008FA24B /* CategoryNameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

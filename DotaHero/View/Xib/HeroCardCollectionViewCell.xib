@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="stC-WS-Qz9" customClass="HeroCardCollectionViewCell" customModule="DotaHero" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U5o-8E-7Cf">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np1-yG-1Gy">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zup-uZ-6fP">
+                                <rect key="frame" x="0.0" y="2" width="150" height="196"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMD-pi-b9h">
+                                <rect key="frame" x="0.0" y="157" width="150" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-3G-RpH">
+                                        <rect key="frame" x="8" y="11" width="134" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VUp-3G-RpH" secondAttribute="trailing" constant="8" id="A8n-id-sHE"/>
+                                    <constraint firstItem="VUp-3G-RpH" firstAttribute="top" secondItem="EMD-pi-b9h" secondAttribute="top" constant="11" id="cUv-Id-bdV"/>
+                                    <constraint firstAttribute="bottom" secondItem="VUp-3G-RpH" secondAttribute="bottom" constant="11" id="fm0-2S-90K"/>
+                                    <constraint firstItem="VUp-3G-RpH" firstAttribute="leading" secondItem="EMD-pi-b9h" secondAttribute="leading" constant="8" id="vcr-M0-Bv1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EMD-pi-b9h" firstAttribute="top" secondItem="np1-yG-1Gy" secondAttribute="top" constant="157" id="AbC-Y0-DZP"/>
+                            <constraint firstAttribute="trailing" secondItem="Zup-uZ-6fP" secondAttribute="trailing" id="DYO-n1-AcG"/>
+                            <constraint firstItem="Zup-uZ-6fP" firstAttribute="leading" secondItem="np1-yG-1Gy" secondAttribute="leading" id="IEm-sW-Os0"/>
+                            <constraint firstAttribute="bottom" secondItem="Zup-uZ-6fP" secondAttribute="bottom" id="Iwd-Ei-apP"/>
+                            <constraint firstAttribute="trailing" secondItem="EMD-pi-b9h" secondAttribute="trailing" id="Jah-G3-H0t"/>
+                            <constraint firstItem="Zup-uZ-6fP" firstAttribute="top" secondItem="np1-yG-1Gy" secondAttribute="top" id="dQk-vO-YVo"/>
+                            <constraint firstAttribute="bottom" secondItem="EMD-pi-b9h" secondAttribute="bottom" id="lcm-gT-7OT"/>
+                            <constraint firstItem="EMD-pi-b9h" firstAttribute="leading" secondItem="np1-yG-1Gy" secondAttribute="leading" id="qcD-tK-iH3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="np1-yG-1Gy" firstAttribute="leading" secondItem="U5o-8E-7Cf" secondAttribute="leading" id="6xL-2d-W0t"/>
+                    <constraint firstAttribute="trailing" secondItem="np1-yG-1Gy" secondAttribute="trailing" id="NPM-JF-Dx7"/>
+                    <constraint firstItem="np1-yG-1Gy" firstAttribute="top" secondItem="U5o-8E-7Cf" secondAttribute="top" id="adC-At-4o8"/>
+                    <constraint firstAttribute="bottom" secondItem="np1-yG-1Gy" secondAttribute="bottom" id="hZV-cG-6Uk"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="147" height="194"/>
+            <point key="canvasLocation" x="126.08695652173914" y="91.741071428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
