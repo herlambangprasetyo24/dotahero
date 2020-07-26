@@ -3,4 +3,54 @@
    uuid = "128866FB-5930-45A1-8D00-6095C41148F4"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02B3B1C4-E4CF-4D2F-B81C-B2E1E1FC16B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DotaHero/API/HeroApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getHeroList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02B3B1C4-E4CF-4D2F-B81C-B2E1E1FC16B3 - 3df67e787048207c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DotaHero.HeroApiService.getHeroList() -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, Swift.Optional&lt;Swift.Array&lt;DotaHero.Hero&gt;&gt;&gt;"
+                  moduleName = "DotaHero"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/herlambangprasetyo/Documents/Workspace/dotahero/DotaHero/API/HeroApiService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "303">
+               </Location>
+               <Location
+                  uuid = "02B3B1C4-E4CF-4D2F-B81C-B2E1E1FC16B3 - 5336a72ed4538a03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;DotaHero.Hero&gt;&gt;, Swift.Array&lt;DotaHero.Hero&gt;) -&gt; Swift.Optional&lt;Swift.Array&lt;DotaHero.Hero&gt;&gt; in DotaHero.HeroApiService.getHeroList() -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, Swift.Optional&lt;Swift.Array&lt;DotaHero.Hero&gt;&gt;&gt;"
+                  moduleName = "DotaHero"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/herlambangprasetyo/Documents/Workspace/dotahero/DotaHero/API/HeroApiService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -28,13 +28,31 @@ class HeroApiService: HeroApiServiceProtocol {
 
     typealias Handler = (Single<Data>) -> Void
     
+    private let heroListStore: HeroListStoreProtocol
+    
+    init(heroListStore: HeroListStoreProtocol) {
+        self.heroListStore = heroListStore
+    }
+    
     func getHeroList() -> Single<[Hero]?> {
-        let url = "\(Domain.baseApiUrl)" + "herostats"
-        return request(method: Method.get, url: url).map { (success, responseData) in
-            let hero = try? JSONDecoder().decode([Hero].self, from: responseData) as [Hero]
-            return hero
+        if let heroListFromCache = heroListStore.getHeroList() {
+            let fromServer = getHeroListFromServer()
+            let fromCache = Single.just(heroListFromCache)
+            return Single.zip(fromServer, fromCache, resultSelector: { result,_ in
+                return result
+            })
         }
         
+        return getHeroListFromServer()
+    }
+    
+    func getHeroListFromServer() -> Single<[Hero]?> {
+        let url = "\(Domain.baseApiUrl)" + "herostats"
+        return request(method: Method.get, url: url).map { [weak self] (success, responseData) in
+            let hero = try? JSONDecoder().decode([Hero].self, from: responseData) as [Hero]
+            self?.heroListStore.save(heroList: hero ?? [Hero]())
+            return hero
+        }
     }
     
     private func request(method: Method, url: String, params: [NSString: Any]? = nil) -> Single<(Bool, Data)> {

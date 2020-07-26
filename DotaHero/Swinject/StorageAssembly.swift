@@ -1,5 +1,5 @@
 //
-//  ApiAssembly.swift
+//  StorageAssembly.swift
 //  DotaHero
 //
 //  Created by Herlambang Prasetyo on 26/07/20.
@@ -9,12 +9,11 @@
 import Foundation
 import Swinject
 
-class ApisAssembly: Assembly {
+class StoragesAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(HeroApiServiceProtocol.self) { r in
-            HeroApiService(heroListStore: r.resolve(HeroListStoreProtocol.self)!)
+        container.register(HeroListStoreProtocol.self) { r in
+            HeroListStore()
         }
     }
-
 }

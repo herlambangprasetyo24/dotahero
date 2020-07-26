@@ -18,6 +18,7 @@ extension SwinjectStoryboard {
         _ = Assembler([
             ViewControllerAssembly(),
             ApisAssembly(),
+            StoragesAssembly()
             ],
             container: defaultContainer
         )
