@@ -7,16 +7,47 @@
 //
 
 import UIKit
+import RxSwift
 
 class HeroListViewController: UIViewController {
 
     @IBOutlet weak var heroListTableView: UITableView!
     @IBOutlet weak var heroCollectionView: UICollectionView!
+    
+    var heroListViewModel: HeroListViewModel!
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        heroListViewModel.viewLoad()
         setupTableView()
         setupCollectionView()
+        setUpHeroListViewModel()
         // Do any additional setup after loading the view.
+    }
+    
+    private func setUpHeroListViewModel() {
+        heroListViewModel.rxEventLoadHeroRoleList
+            .subscribe(onNext: { [weak self] in
+                guard let weakSelf = self else { return }
+                weakSelf.heroListTableView.reloadData()
+                weakSelf.initiateSelectedCategory()
+            }).disposed(by: disposeBag)
+        
+        heroListViewModel.rxEventLoadHeroList
+            .subscribe(onNext: { [weak self] heroList in
+                guard let weakSelf = self else { return }
+                weakSelf.heroCollectionView.reloadData()
+            }).disposed(by: disposeBag)
+    }
+    
+    private func initiateSelectedCategory() {
+        if heroListViewModel.isFirstLoad {
+            let initiateIndex = IndexPath(row: 0, section: 0)
+            heroListTableView.delegate?.tableView?(heroListTableView, didSelectRowAt: initiateIndex)
+            heroListTableView.selectRow(at: initiateIndex, animated: true, scrollPosition: .top)
+            heroListViewModel.isFirstLoad = false
+        }
     }
     
     private func setupTableView() {
@@ -36,12 +67,12 @@ extension HeroListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return heroListViewModel.heroCategoryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CategoryNameTableViewCell.cellReuseIdentifier()) as! CategoryNameTableViewCell
-        cell.categoryNameLabel.text = "Hero \(indexPath.row)"
+        cell.categoryNameLabel.text = heroListViewModel.heroCategoryList[indexPath.row]
         
         return cell
     }
@@ -51,6 +82,7 @@ extension HeroListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        heroListViewModel.didSelectHeroCategory(index: indexPath.row)
         tableView.cellForRow(at: indexPath)?.backgroundColor = .blue
     }
     
@@ -66,11 +98,13 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return heroListViewModel.selectedHeroList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCardCollectionViewCell.cellReuseIdentifier(), for: indexPath) as? HeroCardCollectionViewCell else { return UICollectionViewCell() }
+        let selectedHero = heroListViewModel.selectedHeroList[indexPath.row]
+        cell.setupUI(heroName: selectedHero.localizedName, heroImage: selectedHero.image)
         return cell
     }
     

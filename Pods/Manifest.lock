@@ -1,0 +1,71 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Realm (3.17.0):
+    - Realm/Headers (= 3.17.0)
+  - Realm/Headers (3.17.0)
+  - RealmSwift (3.17.0):
+    - Realm (= 3.17.0)
+  - RxAlamofire (5.1.0):
+    - RxAlamofire/Core (= 5.1.0)
+  - RxAlamofire/Core (5.1.0):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 5.0)
+  - RxAtomic (4.4.2)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SDWebImage (5.1.1):
+    - SDWebImage/Core (= 5.1.1)
+  - SDWebImage/Core (5.1.1)
+  - Swinject (2.6.2)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+
+DEPENDENCIES:
+  - RealmSwift (= 3.17.0)
+  - RxAlamofire (= 5.1.0)
+  - RxAtomic (= 4.4.2)
+  - RxBlocking (= 5.1.1)
+  - RxCocoa (= 5.1.1)
+  - RxSwift (= 5.1.1)
+  - SDWebImage (= 5.1.1)
+  - Swinject (= 2.6.2)
+  - SwinjectStoryboard (= 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Realm
+    - RealmSwift
+    - RxAlamofire
+    - RxAtomic
+    - RxBlocking
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - Swinject
+    - SwinjectStoryboard
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
+  RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
+  RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+
+PODFILE CHECKSUM: 53b5cb6b572d722580fb30231257f993652831e1
+
+COCOAPODS: 1.8.4

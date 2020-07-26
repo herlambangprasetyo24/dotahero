@@ -19,14 +19,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np1-yG-1Gy">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zup-uZ-6fP">
-                                <rect key="frame" x="0.0" y="2" width="150" height="196"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zup-uZ-6fP">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMD-pi-b9h">
                                 <rect key="frame" x="0.0" y="157" width="150" height="43"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-3G-RpH">
-                                        <rect key="frame" x="8" y="11" width="134" height="21"/>
+                                        <rect key="frame" x="0.0" y="11" width="150" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -34,14 +34,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="VUp-3G-RpH" secondAttribute="trailing" constant="8" id="A8n-id-sHE"/>
+                                    <constraint firstAttribute="trailing" secondItem="VUp-3G-RpH" secondAttribute="trailing" id="A8n-id-sHE"/>
                                     <constraint firstItem="VUp-3G-RpH" firstAttribute="top" secondItem="EMD-pi-b9h" secondAttribute="top" constant="11" id="cUv-Id-bdV"/>
                                     <constraint firstAttribute="bottom" secondItem="VUp-3G-RpH" secondAttribute="bottom" constant="11" id="fm0-2S-90K"/>
-                                    <constraint firstItem="VUp-3G-RpH" firstAttribute="leading" secondItem="EMD-pi-b9h" secondAttribute="leading" constant="8" id="vcr-M0-Bv1"/>
+                                    <constraint firstItem="VUp-3G-RpH" firstAttribute="leading" secondItem="EMD-pi-b9h" secondAttribute="leading" id="vcr-M0-Bv1"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EMD-pi-b9h" firstAttribute="top" secondItem="np1-yG-1Gy" secondAttribute="top" constant="157" id="AbC-Y0-DZP"/>
                             <constraint firstAttribute="trailing" secondItem="Zup-uZ-6fP" secondAttribute="trailing" id="DYO-n1-AcG"/>
@@ -62,10 +62,11 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="147" height="194"/>
+            <connections>
+                <outlet property="heroImage" destination="Zup-uZ-6fP" id="v97-ps-yMo"/>
+                <outlet property="heroName" destination="VUp-3G-RpH" id="5Eg-uJ-RIg"/>
+            </connections>
             <point key="canvasLocation" x="126.08695652173914" y="91.741071428571431"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="stop.fill" catalog="system" width="128" height="113"/>
-    </resources>
 </document>
