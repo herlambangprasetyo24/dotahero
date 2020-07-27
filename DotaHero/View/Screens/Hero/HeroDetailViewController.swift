@@ -14,6 +14,7 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet weak var rightContainerView: UIView!
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var heroNameLabel: UILabel!
+    @IBOutlet weak var heroTypeLabel: UILabel!
     @IBOutlet weak var rolesLabel: UILabel!
     @IBOutlet weak var similiarHeroCollectionView: UICollectionView!
     @IBOutlet weak var attackAttributView: HeroInformationView!
@@ -71,6 +72,7 @@ class HeroDetailViewController: UIViewController {
         let heroModel = heroDetailViewModel.heroModel
         heroImageView.loadUrl(Domain.baseUrl + heroModel.image)
         heroNameLabel.text = heroModel.localizedName
+        heroTypeLabel.text = heroModel.attackType.capitalized
         
         attackAttributView.setupUI(value: "\(heroModel.baseAttackMax) - \(heroModel.baseAttackMin)", imageName: "sword")
         armorAttributeView.setupUI(value: "\(heroModel.baseArmor)", imageName: "shield")

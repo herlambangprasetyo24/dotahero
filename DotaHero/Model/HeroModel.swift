@@ -17,6 +17,7 @@ class Hero: Object, Decodable {
     @objc dynamic var image = ""
     @objc dynamic var movementSpeed = 0
     @objc dynamic var primaryAttribute = ""
+    @objc dynamic var attackType = ""
     @objc dynamic var baseAttackMin = 0
     @objc dynamic var baseAttackMax = 0
     @objc dynamic var baseHealth = 0
@@ -38,6 +39,7 @@ class Hero: Object, Decodable {
         case image = "img"
         case movementSpeed = "move_speed"
         case primaryAttribute
+        case attackType = "attack_type"
         case baseAttackMin = "base_attack_min"
         case baseAttackMax = "base_attack_max"
         case baseHealth = "base_health"
@@ -55,6 +57,7 @@ class Hero: Object, Decodable {
         self.image = try values.decodeIfPresent(String.self, forKey: .image) ?? ""
         self.movementSpeed = try values.decodeIfPresent(Int.self, forKey: .movementSpeed) ?? 0
         self.primaryAttribute = try values.decodeIfPresent(String.self, forKey: .primaryAttribute) ?? ""
+        self.attackType = try values.decodeIfPresent(String.self, forKey: .attackType) ?? ""
         self.baseAttackMin = try values.decodeIfPresent(Int.self, forKey: .baseAttackMin) ?? 0
         self.baseAttackMax = try values.decodeIfPresent(Int.self, forKey: .baseAttackMax) ?? 0
         self.baseHealth = try values.decodeIfPresent(Int.self, forKey: .baseHealth) ?? 0

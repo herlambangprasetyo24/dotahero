@@ -140,29 +140,38 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMm-ZG-2hV">
-                                        <rect key="frame" x="8" y="203.33333333333334" width="180" height="21"/>
+                                        <rect key="frame" x="8" y="243.33333333333331" width="180" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQc-iu-65b">
-                                        <rect key="frame" x="8" y="224.33333333333331" width="180" height="20.333333333333343"/>
+                                        <rect key="frame" x="8" y="264.33333333333331" width="180" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxH-e6-jcu">
+                                        <rect key="frame" x="8" y="205" width="180" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="bMm-ZG-2hV" firstAttribute="top" secondItem="cEb-rm-Wdb" secondAttribute="bottom" constant="12" id="0SJ-Bi-Qn8"/>
                                     <constraint firstItem="bMm-ZG-2hV" firstAttribute="trailing" secondItem="cEb-rm-Wdb" secondAttribute="trailing" id="3E1-qx-nGt"/>
                                     <constraint firstItem="AQc-iu-65b" firstAttribute="top" secondItem="bMm-ZG-2hV" secondAttribute="bottom" id="7w3-gQ-lpo"/>
                                     <constraint firstItem="cEb-rm-Wdb" firstAttribute="leading" secondItem="cbK-af-iQv" secondAttribute="leading" constant="8" id="EGk-kL-Bvr"/>
                                     <constraint firstItem="zKn-Lg-Imm" firstAttribute="leading" secondItem="cbK-af-iQv" secondAttribute="leading" constant="8" id="H4h-SF-BvO"/>
+                                    <constraint firstAttribute="trailing" secondItem="FxH-e6-jcu" secondAttribute="trailing" constant="8" id="H5d-CX-3YI"/>
                                     <constraint firstItem="AQc-iu-65b" firstAttribute="trailing" secondItem="bMm-ZG-2hV" secondAttribute="trailing" id="KES-MT-yFM"/>
                                     <constraint firstItem="AQc-iu-65b" firstAttribute="leading" secondItem="bMm-ZG-2hV" secondAttribute="leading" id="L6Q-64-SCI"/>
                                     <constraint firstItem="bMm-ZG-2hV" firstAttribute="leading" secondItem="cEb-rm-Wdb" secondAttribute="leading" id="Mr9-4J-erS"/>
                                     <constraint firstItem="zKn-Lg-Imm" firstAttribute="top" secondItem="cbK-af-iQv" secondAttribute="top" constant="8" id="NhY-8g-9oD"/>
+                                    <constraint firstItem="FxH-e6-jcu" firstAttribute="leading" secondItem="cbK-af-iQv" secondAttribute="leading" constant="8" id="Qox-yF-nma"/>
+                                    <constraint firstItem="FxH-e6-jcu" firstAttribute="top" secondItem="cEb-rm-Wdb" secondAttribute="bottom" constant="13.67" id="Vp7-w1-NcI"/>
+                                    <constraint firstItem="bMm-ZG-2hV" firstAttribute="top" secondItem="FxH-e6-jcu" secondAttribute="bottom" constant="14.33" id="eH2-ar-s0e"/>
                                     <constraint firstItem="cEb-rm-Wdb" firstAttribute="top" secondItem="zKn-Lg-Imm" secondAttribute="bottom" constant="8" id="gPM-Zd-y4h"/>
                                     <constraint firstAttribute="trailing" secondItem="cEb-rm-Wdb" secondAttribute="trailing" constant="8" id="iNA-QR-SsR"/>
                                     <constraint firstAttribute="trailing" secondItem="zKn-Lg-Imm" secondAttribute="trailing" constant="8" id="uLG-Rz-BXO"/>
@@ -288,6 +297,7 @@
                         <outlet property="healthAttributeView" destination="QTO-ms-bZO" id="fLD-d9-Ob3"/>
                         <outlet property="heroImageView" destination="u4g-ND-hLU" id="boc-1B-KAD"/>
                         <outlet property="heroNameLabel" destination="cEb-rm-Wdb" id="JKf-tQ-m9X"/>
+                        <outlet property="heroTypeLabel" destination="FxH-e6-jcu" id="w5b-tU-PLJ"/>
                         <outlet property="manaAttributeView" destination="6xN-MI-Rwp" id="Hdi-bR-EKb"/>
                         <outlet property="movementAttributeView" destination="DDw-gD-KKs" id="JAg-MV-yA3"/>
                         <outlet property="primaryAttackView" destination="0pK-UR-Igx" id="vcZ-jS-QgL"/>
