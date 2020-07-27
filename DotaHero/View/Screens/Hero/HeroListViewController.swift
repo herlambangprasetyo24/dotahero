@@ -54,6 +54,19 @@ class HeroListViewController: UIViewController {
             .subscribe(onNext: { [weak self] hero in
                 self?.performSegue(withIdentifier: "openHeroDetailPage", sender: hero)
             }).disposed(by: disposeBag)
+        
+        heroListViewModel.rxEventShowAlert
+            .subscribe(onNext: { [weak self] in
+                self?.handleErrorRequest()
+            }).disposed(by: disposeBag)
+    }
+    
+    private func handleErrorRequest() {
+        showAlertWithRetryButton(onClickCancelHandler: { [weak self] alert in
+            self?.dismiss(animated: true, completion: nil)
+            }, onClickRetryHandler: { [weak self] alertAction in
+                self?.heroListViewModel.getHeroList()
+        })
     }
     
     private func initiateSelectedCategory() {
@@ -73,6 +86,14 @@ class HeroListViewController: UIViewController {
 
     private func setupCollectionView() {
         heroCollectionView.register(HeroCardCollectionViewCell.nib(), forCellWithReuseIdentifier: HeroCardCollectionViewCell.cellReuseIdentifier())
+    }
+        
+    private func showAlertWithRetryButton(onClickCancelHandler: ((UIAlertAction) -> Void)? = nil, onClickRetryHandler: ((UIAlertAction) -> Void)? = nil) {
+        let alertController = UIAlertController(title: "Connection Lost", message: "No Internet Connection", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: onClickCancelHandler))
+        alertController.addAction(UIAlertAction(title: "Retry", style: .default, handler: onClickRetryHandler))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

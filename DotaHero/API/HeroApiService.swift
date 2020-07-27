@@ -71,6 +71,7 @@ class HeroApiService: HeroApiServiceProtocol {
                 DispatchQueue.main.async {
                     if let error = error {
                         print(error.localizedDescription)
+                        single(.error(error))
                     } else if let httpResponse = response as? HTTPURLResponse {
                         if httpResponse.statusCode == 200 {
                             if data != nil {
