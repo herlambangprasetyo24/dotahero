@@ -62,7 +62,7 @@ class HeroApiService: HeroApiServiceProtocol {
         }
         
         return Single.create { [weak self] single in
-            guard let weakSelf = self else { return Disposables.create() }
+            guard self != nil else { return Disposables.create() }
             let task = URLSession.shared.dataTask(with: url,  completionHandler: { (data, response, error) in
                 DispatchQueue.main.async {
                     if let error = error {

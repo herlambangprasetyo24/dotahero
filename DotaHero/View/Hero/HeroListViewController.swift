@@ -38,6 +38,9 @@ class HeroListViewController: UIViewController {
             .subscribe(onNext: { [weak self] heroList in
                 guard let weakSelf = self else { return }
                 weakSelf.heroCollectionView.reloadData()
+                DispatchQueue.main.async {
+                    weakSelf.heroCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
+                }
             }).disposed(by: disposeBag)
     }
     
@@ -106,11 +109,11 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 150)
+        return CGSize(width: 180, height: 150)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 12, left: 6, bottom: 12, right: 6)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
