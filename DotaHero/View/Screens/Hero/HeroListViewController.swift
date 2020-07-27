@@ -26,6 +26,13 @@ class HeroListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openHeroDetailPage" {
+            guard let destinationViewController = segue.destination as? HeroDetailViewController, let heroModel = sender as? Hero else { return }
+            destinationViewController.setHeroModel(heroModel: heroModel)
+        }
+    }
+    
     private func setUpHeroListViewModel() {
         heroListViewModel.rxEventLoadHeroRoleList
             .subscribe(onNext: { [weak self] in
@@ -41,6 +48,11 @@ class HeroListViewController: UIViewController {
                 DispatchQueue.main.async {
                     weakSelf.heroCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
                 }
+            }).disposed(by: disposeBag)
+        
+        heroListViewModel.rxEventOpenHeroDetailPage
+            .subscribe(onNext: { [weak self] hero in
+                self?.performSegue(withIdentifier: "openHeroDetailPage", sender: hero)
             }).disposed(by: disposeBag)
     }
     
@@ -119,4 +131,9 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 12
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        heroListViewModel.openHeroDetailPage(selectedHeroIndex: indexPath.row)
+    }
+    
 }

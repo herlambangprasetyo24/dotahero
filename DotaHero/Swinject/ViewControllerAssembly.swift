@@ -17,5 +17,9 @@ class ViewControllerAssembly: Assembly {
         container.storyboardInitCompleted(HeroListViewController.self) { r, c in
             c.heroListViewModel = HeroListViewModel(heroApi: r.resolve(HeroApiServiceProtocol.self)!)
         }
+        
+        container.storyboardInitCompleted(HeroDetailViewController.self) { r, c in
+            c.heroDetailViewModel = HeroDetailViewModel(heroApi: r.resolve(HeroApiServiceProtocol.self)!)
+        }
     }
 }

@@ -19,6 +19,10 @@ class HeroListViewModel {
         return eventLoadHeroList
     }
     
+    var rxEventOpenHeroDetailPage: PublishSubject<Hero> {
+        return eventOpenHeroDetailPage
+    }
+    
     var heroListModel = [Hero]()
     var heroCategoryList = [String]()
     var selectedHeroList = [Hero]()
@@ -26,6 +30,7 @@ class HeroListViewModel {
     
     private let eventLoadHeroRoleList = PublishSubject<Void>()
     private let eventLoadHeroList = PublishSubject<Void>()
+    private let eventOpenHeroDetailPage = PublishSubject<Hero>()
     private let heroApi: HeroApiServiceProtocol
     private let disposeBag = DisposeBag()
     
@@ -48,6 +53,11 @@ class HeroListViewModel {
         }
         
         eventLoadHeroList.onNext(())
+    }
+    
+    func openHeroDetailPage(selectedHeroIndex: Int) {
+        let selectedHero = selectedHeroList[selectedHeroIndex]
+        eventOpenHeroDetailPage.onNext(selectedHero)
     }
     
     private func getHeroList() {

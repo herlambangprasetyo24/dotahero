@@ -35,7 +35,7 @@ class HeroApiService: HeroApiServiceProtocol {
     }
     
     func getHeroList() -> Single<[Hero]?> {
-        if let heroListFromCache = heroListStore.getHeroList() {
+        if let heroListFromCache = getHeroListFromCache() {
             let fromServer = getHeroListFromServer()
             let fromCache = Single.just(heroListFromCache)
             return Single.zip(fromServer, fromCache, resultSelector: { result,_ in
@@ -44,6 +44,10 @@ class HeroApiService: HeroApiServiceProtocol {
         }
         
         return getHeroListFromServer()
+    }
+    
+    func getHeroListFromCache() -> [Hero]? {
+        return heroListStore.getHeroList()
     }
     
     func getHeroListFromServer() -> Single<[Hero]?> {

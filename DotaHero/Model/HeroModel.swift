@@ -10,11 +10,18 @@ import RealmSwift
 
 class Hero: Object, Decodable {
     
-    @objc dynamic var id: Int = 0
-    @objc dynamic var name: String = ""
-    @objc dynamic var localizedName: String = ""
-    @objc dynamic var primaryAttr: String = ""
-    @objc dynamic var image: String = ""
+    @objc dynamic var id = 0
+    @objc dynamic var name = ""
+    @objc dynamic var localizedName = ""
+    @objc dynamic var primaryAttr = ""
+    @objc dynamic var image = ""
+    @objc dynamic var movementSpeed = 0
+    @objc dynamic var primaryAttribute = ""
+    @objc dynamic var baseAttackMin = 0
+    @objc dynamic var baseAttackMax = 0
+    @objc dynamic var baseHealth = 0
+    @objc dynamic var baseMana = 0
+    
     var roles = List<String>()
     
     override class func primaryKey() -> String? {
@@ -22,12 +29,18 @@ class Hero: Object, Decodable {
     }
     
     private enum CodingKeys: String, CodingKey {
-        case id
-        case name
+        case id = "id"
+        case name = "name"
         case localizedName = "localized_name"
         case primaryAttr = "primary_attr"
-        case roles
+        case roles = "roles"
         case image = "img"
+        case movementSpeed = "move_speed"
+        case primaryAttribute
+        case baseAttackMin = "base_attack_min"
+        case baseAttackMax = "base_attack_max"
+        case baseHealth = "base_health"
+        case baseMana = "base_mana"
 
     }
     
@@ -39,6 +52,12 @@ class Hero: Object, Decodable {
         self.localizedName = try values.decodeIfPresent(String.self, forKey: .localizedName) ?? ""
         self.primaryAttr = try values.decodeIfPresent(String.self, forKey: .primaryAttr) ?? ""
         self.image = try values.decodeIfPresent(String.self, forKey: .image) ?? ""
+        self.movementSpeed = try values.decodeIfPresent(Int.self, forKey: .movementSpeed) ?? 0
+        self.primaryAttribute = try values.decodeIfPresent(String.self, forKey: .primaryAttribute) ?? ""
+        self.baseAttackMin = try values.decodeIfPresent(Int.self, forKey: .baseAttackMin) ?? 0
+        self.baseAttackMax = try values.decodeIfPresent(Int.self, forKey: .baseAttackMax) ?? 0
+        self.baseHealth = try values.decodeIfPresent(Int.self, forKey: .baseHealth) ?? 0
+        self.baseMana = try values.decodeIfPresent(Int.self, forKey: .baseMana) ?? 0
         
         let rolesList = try values.decodeIfPresent([String].self, forKey: .roles) ?? [String()]
         roles.append(objectsIn: rolesList)

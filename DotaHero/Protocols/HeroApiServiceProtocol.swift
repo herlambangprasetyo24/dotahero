@@ -11,4 +11,5 @@ import RxSwift
 
 protocol HeroApiServiceProtocol {
     func getHeroList() -> Single<[Hero]?>
+    func getHeroListFromCache() -> [Hero]?
 }

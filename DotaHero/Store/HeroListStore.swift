@@ -16,6 +16,8 @@ class HeroListStore: HeroListStoreProtocol {
     func save(heroList: [Hero]) {
         try! realm.write {
             realm.add(heroList, update: .all)
+            let a = getHeroList()
+            print(a)
         }
     }
     

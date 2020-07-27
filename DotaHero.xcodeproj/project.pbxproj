@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0381934724CEA84900FD0E69 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381934624CEA84900FD0E69 /* HeroDetailViewController.swift */; };
+		0383EC0924CEB869003D8720 /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383EC0824CEB869003D8720 /* HeroDetailViewModel.swift */; };
 		0388ABEE24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0388ABED24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift */; };
 		0388ABF124CD724C00E3B707 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0388ABF024CD724C00E3B707 /* UIImageViewExtension.swift */; };
 		0388ABF424CDE6B400E3B707 /* HeroListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0388ABF324CDE6B400E3B707 /* HeroListStore.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0381934624CEA84900FD0E69 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		0383EC0824CEB869003D8720 /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		0388ABED24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		0388ABF024CD724C00E3B707 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		0388ABF324CDE6B400E3B707 /* HeroListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListStore.swift; sourceTree = "<group>"; };
@@ -102,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0381934524CEA80A00FD0E69 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				03E990CC24CBE3B7008FA24B /* Hero.storyboard */,
+				03E990CE24CBE3EA008FA24B /* HeroListViewController.swift */,
+				0381934624CEA84900FD0E69 /* HeroDetailViewController.swift */,
+			);
+			path = Hero;
+			sourceTree = "<group>";
+		};
 		0388ABEF24CD722F00E3B707 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +197,7 @@
 			children = (
 				03E990D324CC1CA5008FA24B /* Xib */,
 				03E990D024CC19F2008FA24B /* Cell */,
-				03E990CB24CBE393008FA24B /* Hero */,
+				03E990CB24CBE393008FA24B /* Screens */,
 				03E990CA24CBE37D008FA24B /* CustomView */,
 			);
 			path = View;
@@ -193,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				03ED88A424CD47AA001F6C17 /* HeroListViewModel.swift */,
+				0383EC0824CEB869003D8720 /* HeroDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -212,13 +227,12 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
-		03E990CB24CBE393008FA24B /* Hero */ = {
+		03E990CB24CBE393008FA24B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				03E990CC24CBE3B7008FA24B /* Hero.storyboard */,
-				03E990CE24CBE3EA008FA24B /* HeroListViewController.swift */,
+				0381934524CEA80A00FD0E69 /* Hero */,
 			);
-			path = Hero;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		03E990D024CC19F2008FA24B /* Cell */ = {
@@ -483,6 +497,7 @@
 				0388ABF124CD724C00E3B707 /* UIImageViewExtension.swift in Sources */,
 				03ED889E24CD2DF1001F6C17 /* Constant.swift in Sources */,
 				03ED88A324CD452E001F6C17 /* HeroApiServiceProtocol.swift in Sources */,
+				0383EC0924CEB869003D8720 /* HeroDetailViewModel.swift in Sources */,
 				03ED88A824CD48CE001F6C17 /* ApiAssembly.swift in Sources */,
 				03E990A924CBDF25008FA24B /* ViewController.swift in Sources */,
 				0388ABF824CDE88600E3B707 /* StorageAssembly.swift in Sources */,
@@ -492,6 +507,7 @@
 				03ED88A024CD319A001F6C17 /* HeroModel.swift in Sources */,
 				0388ABEE24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift in Sources */,
 				0388ABF624CDE6D500E3B707 /* HeroListStoreProtocol.swift in Sources */,
+				0381934724CEA84900FD0E69 /* HeroDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
