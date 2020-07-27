@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0381934724CEA84900FD0E69 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381934624CEA84900FD0E69 /* HeroDetailViewController.swift */; };
 		0383EC0924CEB869003D8720 /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383EC0824CEB869003D8720 /* HeroDetailViewModel.swift */; };
+		0383EC0B24CEF7C2003D8720 /* HeroInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0383EC0A24CEF7C2003D8720 /* HeroInformationView.xib */; };
+		0383EC0D24CEF88D003D8720 /* HeroInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383EC0C24CEF88D003D8720 /* HeroInformationView.swift */; };
 		0388ABEE24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0388ABED24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift */; };
 		0388ABF124CD724C00E3B707 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0388ABF024CD724C00E3B707 /* UIImageViewExtension.swift */; };
 		0388ABF424CDE6B400E3B707 /* HeroListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0388ABF324CDE6B400E3B707 /* HeroListStore.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		0381934624CEA84900FD0E69 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		0383EC0824CEB869003D8720 /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
+		0383EC0A24CEF7C2003D8720 /* HeroInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroInformationView.xib; sourceTree = "<group>"; };
+		0383EC0C24CEF88D003D8720 /* HeroInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroInformationView.swift; sourceTree = "<group>"; };
 		0388ABED24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		0388ABF024CD724C00E3B707 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		0388ABF324CDE6B400E3B707 /* HeroListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListStore.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 		03E990CA24CBE37D008FA24B /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				0383EC0C24CEF88D003D8720 /* HeroInformationView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				03E990D424CC1CD4008FA24B /* HeroCardCollectionViewCell.xib */,
+				0383EC0A24CEF7C2003D8720 /* HeroInformationView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				03E990AE24CBDF2A008FA24B /* Assets.xcassets in Resources */,
 				03E990AC24CBDF25008FA24B /* Main.storyboard in Resources */,
 				03E990D524CC1CD4008FA24B /* HeroCardCollectionViewCell.xib in Resources */,
+				0383EC0B24CEF7C2003D8720 /* HeroInformationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +514,7 @@
 				03ED88A024CD319A001F6C17 /* HeroModel.swift in Sources */,
 				0388ABEE24CD4B1900E3B707 /* SwinjectStoryboard+Setup.swift in Sources */,
 				0388ABF624CDE6D500E3B707 /* HeroListStoreProtocol.swift in Sources */,
+				0383EC0D24CEF88D003D8720 /* HeroInformationView.swift in Sources */,
 				0381934724CEA84900FD0E69 /* HeroDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

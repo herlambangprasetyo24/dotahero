@@ -134,19 +134,19 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEb-rm-Wdb">
-                                        <rect key="frame" x="8" y="166" width="180" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="8" y="166" width="180" height="25.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMm-ZG-2hV">
-                                        <rect key="frame" x="8" y="199" width="180" height="21"/>
+                                        <rect key="frame" x="8" y="203.33333333333334" width="180" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQc-iu-65b">
-                                        <rect key="frame" x="8" y="220" width="180" height="20.333333333333343"/>
+                                        <rect key="frame" x="8" y="224.33333333333331" width="180" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                                         <rect key="frame" x="0.0" y="183" width="540" height="187"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similiar Heroes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRD-e9-5eZ">
-                                                <rect key="frame" x="8" y="16" width="114.66666666666669" height="21"/>
+                                                <rect key="frame" x="8.0000000000000071" y="16" width="114.66666666666669" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -206,13 +206,65 @@
                                             <constraint firstItem="MRD-e9-5eZ" firstAttribute="top" secondItem="TZD-vT-IFJ" secondAttribute="top" constant="16" id="OGx-WU-1YF"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V87-ll-Eck" customClass="HeroInformationView" customModule="DotaHero" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="61"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTO-ms-bZO" customClass="HeroInformationView" customModule="DotaHero" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="0.0" width="270" height="61"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xN-MI-Rwp" customClass="HeroInformationView" customModule="DotaHero" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="61" width="270" height="61"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-UR-Igx" customClass="HeroInformationView" customModule="DotaHero" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="122" width="270" height="61"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asc-Cv-9iY" customClass="HeroInformationView" customModule="DotaHero" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="61" width="270" height="61"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDw-gD-KKs" customClass="HeroInformationView" customModule="DotaHero" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="122" width="270" height="61"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="QTO-ms-bZO" firstAttribute="width" secondItem="zRF-cJ-k70" secondAttribute="width" multiplier="0.5" id="0hH-lv-Bmw"/>
+                                    <constraint firstItem="V87-ll-Eck" firstAttribute="top" secondItem="zRF-cJ-k70" secondAttribute="top" id="2II-Ja-0qe"/>
+                                    <constraint firstItem="0pK-UR-Igx" firstAttribute="top" secondItem="DDw-gD-KKs" secondAttribute="top" id="3s0-B0-ekG"/>
+                                    <constraint firstItem="DDw-gD-KKs" firstAttribute="leading" secondItem="asc-Cv-9iY" secondAttribute="leading" id="5b4-td-TfH"/>
+                                    <constraint firstItem="6xN-MI-Rwp" firstAttribute="top" secondItem="QTO-ms-bZO" secondAttribute="bottom" id="5bR-IV-lQ3"/>
+                                    <constraint firstItem="asc-Cv-9iY" firstAttribute="leading" secondItem="V87-ll-Eck" secondAttribute="leading" id="6Nr-RP-eag"/>
+                                    <constraint firstItem="asc-Cv-9iY" firstAttribute="trailing" secondItem="V87-ll-Eck" secondAttribute="trailing" id="Eei-I7-PH7"/>
+                                    <constraint firstItem="asc-Cv-9iY" firstAttribute="top" secondItem="zRF-cJ-k70" secondAttribute="top" constant="61" id="GN8-7r-hil"/>
+                                    <constraint firstItem="0pK-UR-Igx" firstAttribute="bottom" secondItem="DDw-gD-KKs" secondAttribute="bottom" id="Guf-rW-5Av"/>
                                     <constraint firstAttribute="trailing" secondItem="TZD-vT-IFJ" secondAttribute="trailing" id="KRE-mE-RLa"/>
+                                    <constraint firstItem="TZD-vT-IFJ" firstAttribute="top" secondItem="0pK-UR-Igx" secondAttribute="bottom" id="KVe-fq-Mgk"/>
+                                    <constraint firstItem="asc-Cv-9iY" firstAttribute="top" secondItem="V87-ll-Eck" secondAttribute="bottom" id="OW8-JF-9Vw"/>
+                                    <constraint firstItem="DDw-gD-KKs" firstAttribute="trailing" secondItem="asc-Cv-9iY" secondAttribute="trailing" id="Rcl-mP-h9g"/>
+                                    <constraint firstItem="6xN-MI-Rwp" firstAttribute="leading" secondItem="QTO-ms-bZO" secondAttribute="leading" id="VkR-ZT-jpG"/>
+                                    <constraint firstItem="6xN-MI-Rwp" firstAttribute="trailing" secondItem="QTO-ms-bZO" secondAttribute="trailing" id="Vm6-ol-PG9"/>
+                                    <constraint firstItem="asc-Cv-9iY" firstAttribute="width" secondItem="V87-ll-Eck" secondAttribute="width" id="XcZ-13-DAG"/>
+                                    <constraint firstItem="QTO-ms-bZO" firstAttribute="leading" secondItem="V87-ll-Eck" secondAttribute="trailing" id="acr-hX-UMU"/>
+                                    <constraint firstItem="DDw-gD-KKs" firstAttribute="top" secondItem="zRF-cJ-k70" secondAttribute="top" constant="122" id="avy-5S-i0S"/>
+                                    <constraint firstItem="0pK-UR-Igx" firstAttribute="leading" secondItem="6xN-MI-Rwp" secondAttribute="leading" id="bSh-9G-kuk"/>
+                                    <constraint firstItem="0pK-UR-Igx" firstAttribute="top" secondItem="6xN-MI-Rwp" secondAttribute="bottom" id="dFY-JD-PLg"/>
+                                    <constraint firstItem="QTO-ms-bZO" firstAttribute="top" secondItem="zRF-cJ-k70" secondAttribute="top" id="dz5-ud-f1n"/>
+                                    <constraint firstItem="0pK-UR-Igx" firstAttribute="width" secondItem="6xN-MI-Rwp" secondAttribute="width" id="fQl-GH-xrx"/>
                                     <constraint firstAttribute="bottom" secondItem="TZD-vT-IFJ" secondAttribute="bottom" id="i2u-pX-htZ"/>
+                                    <constraint firstItem="0pK-UR-Igx" firstAttribute="trailing" secondItem="6xN-MI-Rwp" secondAttribute="trailing" id="irp-Oy-JKp"/>
+                                    <constraint firstItem="V87-ll-Eck" firstAttribute="width" secondItem="zRF-cJ-k70" secondAttribute="width" multiplier="0.5" id="kZ9-6Z-f0q"/>
                                     <constraint firstItem="TZD-vT-IFJ" firstAttribute="leading" secondItem="zRF-cJ-k70" secondAttribute="leading" id="mCL-M0-nVf"/>
+                                    <constraint firstItem="6xN-MI-Rwp" firstAttribute="top" secondItem="asc-Cv-9iY" secondAttribute="top" id="oQS-wK-e1K"/>
+                                    <constraint firstAttribute="trailing" secondItem="QTO-ms-bZO" secondAttribute="trailing" id="rXD-r8-EE1"/>
+                                    <constraint firstItem="DDw-gD-KKs" firstAttribute="top" secondItem="asc-Cv-9iY" secondAttribute="bottom" id="tMR-4j-nun"/>
                                     <constraint firstItem="TZD-vT-IFJ" firstAttribute="top" secondItem="zRF-cJ-k70" secondAttribute="top" constant="183" id="uFy-gh-qfg"/>
+                                    <constraint firstItem="6xN-MI-Rwp" firstAttribute="top" secondItem="QTO-ms-bZO" secondAttribute="bottom" id="ykj-wQ-gri"/>
+                                    <constraint firstItem="V87-ll-Eck" firstAttribute="leading" secondItem="zRF-cJ-k70" secondAttribute="leading" id="z7K-d4-Y4Z"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -231,8 +283,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="nHQ-cQ-FuO"/>
                     <connections>
+                        <outlet property="armorAttributeView" destination="asc-Cv-9iY" id="MNJ-QZ-D7O"/>
+                        <outlet property="attackAttributView" destination="V87-ll-Eck" id="3i7-G7-Bhn"/>
+                        <outlet property="healthAttributeView" destination="QTO-ms-bZO" id="fLD-d9-Ob3"/>
                         <outlet property="heroImageView" destination="u4g-ND-hLU" id="boc-1B-KAD"/>
                         <outlet property="heroNameLabel" destination="cEb-rm-Wdb" id="JKf-tQ-m9X"/>
+                        <outlet property="manaAttributeView" destination="6xN-MI-Rwp" id="Hdi-bR-EKb"/>
+                        <outlet property="movementAttributeView" destination="DDw-gD-KKs" id="JAg-MV-yA3"/>
+                        <outlet property="primaryAttackView" destination="0pK-UR-Igx" id="vcZ-jS-QgL"/>
                         <outlet property="rightContainerView" destination="zRF-cJ-k70" id="3Fc-77-8wT"/>
                         <outlet property="rolesLabel" destination="AQc-iu-65b" id="edm-b6-oHc"/>
                         <outlet property="similiarHeroCollectionView" destination="SPk-o8-I5r" id="6zB-zH-E72"/>

@@ -21,6 +21,7 @@ class Hero: Object, Decodable {
     @objc dynamic var baseAttackMax = 0
     @objc dynamic var baseHealth = 0
     @objc dynamic var baseMana = 0
+    @objc dynamic var baseArmor: Float = 0.00
     
     var roles = List<String>()
     
@@ -41,7 +42,7 @@ class Hero: Object, Decodable {
         case baseAttackMax = "base_attack_max"
         case baseHealth = "base_health"
         case baseMana = "base_mana"
-
+        case baseArmor = "base_armor"
     }
     
     public required convenience init(from decoder: Decoder) throws {
@@ -58,10 +59,10 @@ class Hero: Object, Decodable {
         self.baseAttackMax = try values.decodeIfPresent(Int.self, forKey: .baseAttackMax) ?? 0
         self.baseHealth = try values.decodeIfPresent(Int.self, forKey: .baseHealth) ?? 0
         self.baseMana = try values.decodeIfPresent(Int.self, forKey: .baseMana) ?? 0
+        self.baseArmor = try values.decodeIfPresent(Float.self, forKey: .baseArmor) ?? 0.00
         
         let rolesList = try values.decodeIfPresent([String].self, forKey: .roles) ?? [String()]
         roles.append(objectsIn: rolesList)
-        
     }
     
 }

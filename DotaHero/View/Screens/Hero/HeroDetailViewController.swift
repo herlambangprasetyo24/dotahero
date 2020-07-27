@@ -16,7 +16,12 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var rolesLabel: UILabel!
     @IBOutlet weak var similiarHeroCollectionView: UICollectionView!
-    
+    @IBOutlet weak var attackAttributView: HeroInformationView!
+    @IBOutlet weak var armorAttributeView: HeroInformationView!
+    @IBOutlet weak var healthAttributeView: HeroInformationView!
+    @IBOutlet weak var movementAttributeView: HeroInformationView!
+    @IBOutlet weak var manaAttributeView: HeroInformationView!
+    @IBOutlet weak var primaryAttackView: HeroInformationView!
     var heroDetailViewModel: HeroDetailViewModel!
     
     private let disposeBag = DisposeBag()
@@ -42,6 +47,7 @@ class HeroDetailViewController: UIViewController {
             .subscribe(onNext: { [weak self] in
                 guard let weakSelf = self else { return }
                 weakSelf.setupUI()
+                weakSelf.setRolesUI()
             }).disposed(by: disposeBag)
         
         heroDetailViewModel.rxEventLoadSimiliarHero
@@ -62,10 +68,20 @@ class HeroDetailViewController: UIViewController {
     }
     
     private func setupUI() {
-        heroImageView.loadUrl(Domain.baseUrl + heroDetailViewModel.heroModel.image)
-        heroNameLabel.text = heroDetailViewModel.heroModel.localizedName
+        let heroModel = heroDetailViewModel.heroModel
+        heroImageView.loadUrl(Domain.baseUrl + heroModel.image)
+        heroNameLabel.text = heroModel.localizedName
+        
+        attackAttributView.setupUI(value: "\(heroModel.baseAttackMax) - \(heroModel.baseAttackMin)", imageName: "sword")
+        armorAttributeView.setupUI(value: "\(heroModel.baseArmor)", imageName: "shield")
+        healthAttributeView.setupUI(value: "\(heroModel.baseHealth)", imageName: "blood")
+        movementAttributeView.setupUI(value: "\(heroModel.movementSpeed)", imageName: "speed")
+        manaAttributeView.setupUI(value: "\(heroModel.baseMana)", imageName: "potion")
+        primaryAttackView.setupUI(value: "\(heroModel.primaryAttr)", imageName: "attack")
+    }
+    
+    private func setRolesUI() {
         let roles = heroDetailViewModel.heroModel.roles.joined(separator: ", ")
-        print(roles)
         rolesLabel.text = roles
     }
     
