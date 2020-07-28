@@ -63,14 +63,14 @@ class HeroDetailViewController: UIViewController {
     }
     
     private func openSimiliarHeroDetailPage(similiarHero: Hero) {
-        guard let destinationViewController = storyboard?.instantiateViewController(identifier: "HeroDetailViewController") as? HeroDetailViewController else { return }
+        guard let destinationViewController = storyboard?.instantiateViewController(identifier: Constant.ViewControllerIdentifier.heroDetailViewController) as? HeroDetailViewController else { return }
         destinationViewController.setHeroModel(heroModel: similiarHero)
         navigationController?.pushViewController(destinationViewController, animated: true)
     }
     
     private func setupUI() {
         let heroModel = heroDetailViewModel.heroModel
-        heroImageView.loadUrl(Domain.baseUrl + heroModel.image)
+        heroImageView.loadUrl(Constant.Domain.baseUrl + heroModel.image)
         heroNameLabel.text = heroModel.localizedName
         heroTypeLabel.text = heroModel.attackType.capitalized
         

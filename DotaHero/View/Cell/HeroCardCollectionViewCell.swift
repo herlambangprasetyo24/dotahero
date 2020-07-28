@@ -34,7 +34,7 @@ class HeroCardCollectionViewCell: UICollectionViewCell {
     
     func setupData(heroName: String, heroImage: String) {
         self.heroName.text = heroName
-        self.heroImage.loadUrl(Domain.baseUrl + heroImage)
+        self.heroImage.loadUrl(Constant.Domain.baseUrl + heroImage)
     }
     
 }

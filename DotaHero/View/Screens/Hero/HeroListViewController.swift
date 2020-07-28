@@ -27,7 +27,7 @@ class HeroListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "openHeroDetailPage" {
+        if segue.identifier == Constant.NavigationIdentifier.openHeroDetailPage {
             guard let destinationViewController = segue.destination as? HeroDetailViewController, let heroModel = sender as? Hero else { return }
             destinationViewController.setHeroModel(heroModel: heroModel)
         }
@@ -52,7 +52,7 @@ class HeroListViewController: UIViewController {
         
         heroListViewModel.rxEventOpenHeroDetailPage
             .subscribe(onNext: { [weak self] hero in
-                self?.performSegue(withIdentifier: "openHeroDetailPage", sender: hero)
+                self?.performSegue(withIdentifier: Constant.NavigationIdentifier.openHeroDetailPage, sender: hero)
             }).disposed(by: disposeBag)
         
         heroListViewModel.rxEventShowAlert
@@ -89,9 +89,9 @@ class HeroListViewController: UIViewController {
     }
         
     private func showAlertWithRetryButton(onClickCancelHandler: ((UIAlertAction) -> Void)? = nil, onClickRetryHandler: ((UIAlertAction) -> Void)? = nil) {
-        let alertController = UIAlertController(title: "Connection Lost", message: "No Internet Connection", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: onClickCancelHandler))
-        alertController.addAction(UIAlertAction(title: "Retry", style: .default, handler: onClickRetryHandler))
+        let alertController = UIAlertController(title: Constant.Error.noInternetTitle, message: Constant.Error.noInternetMessage, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Constant.Error.cancelButton, style: .cancel, handler: onClickCancelHandler))
+        alertController.addAction(UIAlertAction(title: Constant.Error.retryButton, style: .default, handler: onClickRetryHandler))
         
         self.present(alertController, animated: true, completion: nil)
     }

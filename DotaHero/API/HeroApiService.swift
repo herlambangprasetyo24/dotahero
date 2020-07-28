@@ -17,11 +17,6 @@ public enum Method {
     case head
     case post
     case put
-    case connect
-    case options
-    case trace
-    case patch
-    case other(method: String)
 }
 
 class HeroApiService: HeroApiServiceProtocol {
@@ -51,7 +46,7 @@ class HeroApiService: HeroApiServiceProtocol {
     }
     
     func getHeroListFromServer() -> Single<[Hero]?> {
-        let url = "\(Domain.baseApiUrl)" + "herostats"
+        let url = "\(Constant.Domain.baseApiUrl)" + "herostats"
         return request(method: Method.get, url: url).map { [weak self] (success, responseData) in
             let hero = try? JSONDecoder().decode([Hero].self, from: responseData) as [Hero]
             self?.heroListStore.save(heroList: hero ?? [Hero]())
