@@ -42,7 +42,8 @@ class HeroDetailViewModel {
     
     var heroModel = Hero()
     var similiarHero = [Hero]()
-
+    var heroListBasedOnCategory = [Hero]()
+    
     private let similiarHeroPrefix = 3
     private let eventLoadHeroDetail = PublishSubject<Void>()
     private let eventLoadSimiliarHero = PublishSubject<Void>()
@@ -59,8 +60,9 @@ class HeroDetailViewModel {
         generateSimiliarHeroes()
     }
     
-    func setHeroModel(heroModel: Hero) {
+    func setHeroModel(heroModel: Hero, heroListBasedOnCategory: [Hero]) {
         self.heroModel = heroModel
+        self.heroListBasedOnCategory = heroListBasedOnCategory
     }
     
     func openHeroDetailPage(index: Int) {
@@ -69,15 +71,14 @@ class HeroDetailViewModel {
     }
     
     func generateSimiliarHeroes() {
-        guard let heroList = heroApi.getHeroListFromCache() else { return }
         var sortedHeroList = [Hero]()
         
         if heroModel.primaryAttr == HeroPrimaryAttribute.agi.getPrimaryAttribute() {
-            sortedHeroList = heroList.sorted(by: { $0.movementSpeed > $1.movementSpeed })
+            sortedHeroList = heroListBasedOnCategory.sorted(by: { $0.movementSpeed > $1.movementSpeed })
         } else if heroModel.primaryAttr == HeroPrimaryAttribute.str.getPrimaryAttribute() {
-            sortedHeroList = heroList.sorted(by: { $0.baseAttackMax > $1.baseAttackMax })
+            sortedHeroList = heroListBasedOnCategory.sorted(by: { $0.baseAttackMax > $1.baseAttackMax })
         } else {
-            sortedHeroList = heroList.sorted(by: { $0.baseMana < $1.baseMana })
+            sortedHeroList = heroListBasedOnCategory.sorted(by: { $0.baseMana > $1.baseMana })
         }
         
         similiarHero = Array(sortedHeroList.prefix(similiarHeroPrefix))

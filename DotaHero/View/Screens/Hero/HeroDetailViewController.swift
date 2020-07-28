@@ -39,8 +39,8 @@ class HeroDetailViewController: UIViewController {
         self.title = heroDetailViewModel.heroModel.localizedName
     }
     
-    func setHeroModel(heroModel: Hero) {
-        heroDetailViewModel.setHeroModel(heroModel: heroModel)
+    func setHeroModel(heroModel: Hero, heroListBasedOnCategory: [Hero]) {
+        heroDetailViewModel.setHeroModel(heroModel: heroModel, heroListBasedOnCategory: heroListBasedOnCategory)
     }
     
     private func setupViewModel() {
@@ -64,7 +64,7 @@ class HeroDetailViewController: UIViewController {
     
     private func openSimiliarHeroDetailPage(similiarHero: Hero) {
         guard let destinationViewController = storyboard?.instantiateViewController(identifier: Constant.ViewControllerIdentifier.heroDetailViewController) as? HeroDetailViewController else { return }
-        destinationViewController.setHeroModel(heroModel: similiarHero)
+        destinationViewController.setHeroModel(heroModel: similiarHero, heroListBasedOnCategory: heroDetailViewModel.heroListBasedOnCategory)
         navigationController?.pushViewController(destinationViewController, animated: true)
     }
     
@@ -74,7 +74,7 @@ class HeroDetailViewController: UIViewController {
         heroNameLabel.text = heroModel.localizedName
         heroTypeLabel.text = heroModel.attackType.capitalized
         
-        attackAttributView.setupUI(value: "\(heroModel.baseAttackMax) - \(heroModel.baseAttackMin)", imageName: "sword")
+        attackAttributView.setupUI(value: "\(heroModel.baseAttackMin) - \(heroModel.baseAttackMax)", imageName: "sword")
         armorAttributeView.setupUI(value: "\(heroModel.baseArmor)", imageName: "shield")
         healthAttributeView.setupUI(value: "\(heroModel.baseHealth)", imageName: "blood")
         movementAttributeView.setupUI(value: "\(heroModel.movementSpeed)", imageName: "speed")

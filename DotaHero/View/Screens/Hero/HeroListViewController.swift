@@ -29,7 +29,7 @@ class HeroListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.NavigationIdentifier.openHeroDetailPage {
             guard let destinationViewController = segue.destination as? HeroDetailViewController, let heroModel = sender as? Hero else { return }
-            destinationViewController.setHeroModel(heroModel: heroModel)
+            destinationViewController.setHeroModel(heroModel: heroModel, heroListBasedOnCategory: heroListViewModel.selectedHeroList)
         }
     }
     
