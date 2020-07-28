@@ -9,6 +9,24 @@
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>DotaHeroTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>03E990A024CBDF25008FA24B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03E990B624CBDF2A008FA24B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

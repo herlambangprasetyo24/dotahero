@@ -68,11 +68,7 @@ class HeroDetailViewModel {
         eventOpenHeroDetailPage.onNext(selectedSimiliarHero)
     }
     
-    private func loadHeroDetail() {
-        eventLoadHeroDetail.onNext(())
-    }
-    
-    private func generateSimiliarHeroes() {
+    func generateSimiliarHeroes() {
         guard let heroList = heroApi.getHeroListFromCache() else { return }
         var sortedHeroList = [Hero]()
         
@@ -93,6 +89,10 @@ class HeroDetailViewModel {
         let count = similiarHero.count
         self.similiarHero.remove(at: currentHeroIndex)
         self.similiarHero.append(sortedHeroList[count])
+    }
+    
+    private func loadHeroDetail() {
+        eventLoadHeroDetail.onNext(())
     }
 
 }

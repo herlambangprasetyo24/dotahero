@@ -76,7 +76,7 @@ class HeroListViewModel {
             }).disposed(by: disposeBag)
     }
     
-    private func generateHeroCategoryList() {
+    func generateHeroCategoryList() {
         heroListModel.forEach { hero in
             heroCategoryList = Array(Set(hero.roles).union(heroCategoryList))
         }

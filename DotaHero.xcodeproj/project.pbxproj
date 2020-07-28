@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0370092224CFE25700F04AD7 /* HeroListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370092124CFE25700F04AD7 /* HeroListViewModelTests.swift */; };
+		0370092624D0252A00F04AD7 /* HeroList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0370092524D0252A00F04AD7 /* HeroList.json */; };
+		0370092824D02DEF00F04AD7 /* HeroDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370092724D02DEF00F04AD7 /* HeroDetailViewModelTests.swift */; };
+		0370092A24D033A800F04AD7 /* HeroApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370092924D033A800F04AD7 /* HeroApiServiceTests.swift */; };
 		0381934724CEA84900FD0E69 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381934624CEA84900FD0E69 /* HeroDetailViewController.swift */; };
 		0383EC0924CEB869003D8720 /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383EC0824CEB869003D8720 /* HeroDetailViewModel.swift */; };
 		0383EC0B24CEF7C2003D8720 /* HeroInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0383EC0A24CEF7C2003D8720 /* HeroInformationView.xib */; };
@@ -50,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0370092124CFE25700F04AD7 /* HeroListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewModelTests.swift; sourceTree = "<group>"; };
+		0370092524D0252A00F04AD7 /* HeroList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HeroList.json; sourceTree = "<group>"; };
+		0370092724D02DEF00F04AD7 /* HeroDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModelTests.swift; sourceTree = "<group>"; };
+		0370092924D033A800F04AD7 /* HeroApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroApiServiceTests.swift; sourceTree = "<group>"; };
 		0381934624CEA84900FD0E69 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		0383EC0824CEB869003D8720 /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		0383EC0A24CEF7C2003D8720 /* HeroInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroInformationView.xib; sourceTree = "<group>"; };
@@ -110,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0370092324D0250000F04AD7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0370092424D0250A00F04AD7 /* Json */,
+				03ED889C24CD2DE4001F6C17 /* Constant */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0370092424D0250A00F04AD7 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				0370092524D0252A00F04AD7 /* HeroList.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		0381934524CEA80A00FD0E69 /* Hero */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,11 +184,11 @@
 		03E990A324CBDF25008FA24B /* DotaHero */ = {
 			isa = PBXGroup;
 			children = (
+				0370092324D0250000F04AD7 /* Util */,
 				0388ABF224CDE51E00E3B707 /* Store */,
 				0388ABEF24CD722F00E3B707 /* Extension */,
 				03ED88A624CD4897001F6C17 /* Swinject */,
 				03ED88A124CD4513001F6C17 /* Protocols */,
-				03ED889C24CD2DE4001F6C17 /* Constant */,
 				03E990C924CBE32A008FA24B /* API */,
 				03E990C624CBE060008FA24B /* Model */,
 				03E990C724CBE069008FA24B /* View */,
@@ -184,6 +209,9 @@
 			children = (
 				03E990BB24CBDF2A008FA24B /* DotaHeroTests.swift */,
 				03E990BD24CBDF2A008FA24B /* Info.plist */,
+				0370092124CFE25700F04AD7 /* HeroListViewModelTests.swift */,
+				0370092724D02DEF00F04AD7 /* HeroDetailViewModelTests.swift */,
+				0370092924D033A800F04AD7 /* HeroApiServiceTests.swift */,
 			);
 			path = DotaHeroTests;
 			sourceTree = "<group>";
@@ -395,6 +423,7 @@
 				03E990B124CBDF2A008FA24B /* LaunchScreen.storyboard in Resources */,
 				03E990AE24CBDF2A008FA24B /* Assets.xcassets in Resources */,
 				03E990AC24CBDF25008FA24B /* Main.storyboard in Resources */,
+				0370092624D0252A00F04AD7 /* HeroList.json in Resources */,
 				03E990D524CC1CD4008FA24B /* HeroCardCollectionViewCell.xib in Resources */,
 				0383EC0B24CEF7C2003D8720 /* HeroInformationView.xib in Resources */,
 			);
@@ -523,6 +552,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0370092A24D033A800F04AD7 /* HeroApiServiceTests.swift in Sources */,
+				0370092224CFE25700F04AD7 /* HeroListViewModelTests.swift in Sources */,
+				0370092824D02DEF00F04AD7 /* HeroDetailViewModelTests.swift in Sources */,
 				03E990BC24CBDF2A008FA24B /* DotaHeroTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
